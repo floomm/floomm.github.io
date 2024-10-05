@@ -11,13 +11,29 @@ interface NavbarMenuProps {
 const NavbarMenu: React.FC<NavbarMenuProps> = ({ as, align = "normal", spacing = 8, onClick }) => {
     return(
         <Box as={as} align={align} spacing={spacing}>
-            <NavbarMenuItem to="/whoami" tooltip="Learn more about me" disabled={true} onClick={onClick}>
+            <NavbarMenuItem
+                to="/whoami"
+                tooltip="Learn more about me"
+                disabled={true}
+                onClick={onClick}
+            >
                 <Heading size='md'>Whoami</Heading>
             </NavbarMenuItem>
-            <NavbarMenuItem to="https://flum.tech/docs/blog" tooltip="Read my blog posts" disabled={false} onClick={onClick}>
+            <NavbarMenuItem
+                to="https://flum.tech/docs/blog/"
+                tooltip="Read my blog posts"
+                disabled={false}
+                external={true}
+                onClick={onClick}
+            >
                 <Heading size='md'>Blog</Heading>
             </NavbarMenuItem>
-            <NavbarMenuItem to="/projects" tooltip="Check out my projects" disabled={true} onClick={onClick}>
+            <NavbarMenuItem
+                to="/projects"
+                tooltip="Check out my projects"
+                disabled={true}
+                onClick={onClick}
+            >
                 <Heading size='md'>Projects</Heading>
             </NavbarMenuItem>
         </Box>

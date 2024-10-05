@@ -6,10 +6,11 @@ interface NavbarMenuItemProps {
     to: string;
     tooltip?: string;
     disabled?: boolean;
+    external?: boolean;
     onClick?: () => void;
 }
 
-const NavbarMenuItem: React.FC<NavbarMenuItemProps> = ({ children, to, tooltip, disabled = false, onClick }) => {
+const NavbarMenuItem: React.FC<NavbarMenuItemProps> = ({ children, to, tooltip, disabled = false, external = false, onClick }) => {
 
     const activeBgColor = useColorModeValue("gray.100", "gray.700");
     const tooltipDelay: number = 500;
@@ -30,6 +31,25 @@ const NavbarMenuItem: React.FC<NavbarMenuItemProps> = ({ children, to, tooltip, 
                 </Button>
             </Tooltip>
         )
+    }
+
+    if (external) {
+        return (
+            <Tooltip hasArrow openDelay={tooltipDelay} label={tooltip}>
+                <Button
+                    width="100%"
+                    as="a"
+                    href={to}
+                    onClick={onClick}
+                    variant="ghost"
+                    _hover={{
+                        bg: activeBgColor,
+                    }}
+                >
+                    {children}
+                </Button>
+            </Tooltip>
+        );
     }
 
     return (
