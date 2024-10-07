@@ -1,4 +1,4 @@
-import { Avatar, Box, Button, Flex, Text } from "@chakra-ui/react";
+import {Avatar, Box, Button, Flex, Text} from "@chakra-ui/react";
 import { NavLink as ReactRouterNavLink } from 'react-router-dom';
 
 interface SilvanProps {
@@ -16,7 +16,7 @@ const Silvan: React.FC<SilvanProps> = ({ onClick }) => {
             onClick={onClick}
         >
             <Flex alignItems="center">
-                <Avatar name="Silvan Flum" src="/img/Flum_Silvan_Cropped.jpg"  size="sm"/>
+                <Avatar name="Silvan Flum" size="sm"/>
                 <Box ml='3'>
                     <Text fontSize="lg">Silvan Flum</Text>
                     <Text fontSize="sm">Software Developer</Text>

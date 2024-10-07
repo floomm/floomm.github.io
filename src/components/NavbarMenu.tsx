@@ -9,22 +9,22 @@ interface NavbarMenuProps {
 }
 
 const NavbarMenu: React.FC<NavbarMenuProps> = ({ as, align = "normal", spacing = 8, onClick }) => {
-    const blogUrl: string = import.meta.env.VITE_DOCUSAURUS_URL;
+    const docusaurusUrl: string = import.meta.env.VITE_DOCUSAURUS_URL;
 
     return(
         <Box as={as} align={align} spacing={spacing}>
             <NavbarMenuItem
                 to="/whoami"
                 tooltip="Learn more about me"
-                disabled={true}
+                disabled={false}
                 onClick={onClick}
             >
                 <Heading size='md'>Whoami</Heading>
             </NavbarMenuItem>
             <NavbarMenuItem
-                to={blogUrl + "/blog"}
+                to={docusaurusUrl + "/blog"}
                 tooltip="Read my blog posts"
-                disabled={false}
+                disabled={true}
                 external={true}
                 onClick={onClick}
             >

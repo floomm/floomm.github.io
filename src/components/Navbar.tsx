@@ -11,7 +11,8 @@ const Navbar: React.FC = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
-            <Box as="nav"  px={4} py={2} boxShadow="sm">
+        <Flex justifyContent="center">
+            <Box as="nav" maxW={1600} width="100%" px={4} py={2} boxShadow="sm">
                 <Flex alignItems="center" justifyContent="space-between">
                     <Silvan />
 
@@ -52,6 +53,7 @@ const Navbar: React.FC = () => {
                     </DrawerContent>
                 </Drawer>
             </Box>
+        </Flex>
     );
 };
 

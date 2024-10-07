@@ -218,7 +218,7 @@ export default function Welcome() {
 
     return (
         <Center>
-            <Card width="100%" align="center" margin={4}>
+            <Card maxW={1600} width="100%" align="center" margin={4}>
                 <CardHeader>
                     <Image
                         borderRadius="full"
