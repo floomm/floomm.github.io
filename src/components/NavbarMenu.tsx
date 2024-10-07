@@ -9,6 +9,8 @@ interface NavbarMenuProps {
 }
 
 const NavbarMenu: React.FC<NavbarMenuProps> = ({ as, align = "normal", spacing = 8, onClick }) => {
+    const blogUrl: string = import.meta.env.VITE_DOCUSAURUS_URL;
+
     return(
         <Box as={as} align={align} spacing={spacing}>
             <NavbarMenuItem
@@ -20,7 +22,7 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ as, align = "normal", spacing =
                 <Heading size='md'>Whoami</Heading>
             </NavbarMenuItem>
             <NavbarMenuItem
-                to="https://flum.tech/docs/blog/"
+                to={blogUrl + "/blog"}
                 tooltip="Read my blog posts"
                 disabled={false}
                 external={true}
