@@ -40,7 +40,7 @@ const ActionMenu: React.FC<ActionMenuProps> = ({ colorMode, toggleColorMode }) =
             />
             <IconButton
                 aria-label="Toggle Dark/Light mode"
-                icon={colorMode === "light" ? <FaMoon /> : <FaSun />}
+                icon={colorMode === "light" ? <FaSun /> : <FaMoon />}
                 size="md"
                 variant="ghost"
                 onClick={toggleColorMode}
