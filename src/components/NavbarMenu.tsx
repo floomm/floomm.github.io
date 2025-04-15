@@ -7,8 +7,7 @@ interface NavbarMenuProps {
     onClick?: () => void;
 }
 
-const NavbarMenu: React.FC<NavbarMenuProps> = ({ as, align = "normal", spacing = 8, onClick }) => {
-    const docusaurusUrl: string = import.meta.env.VITE_DOCUSAURUS_URL;
+const NavbarMenu: React.FC<NavbarMenuProps> = ({ as, align = "normal", spacing = 8 }) => {
 
     return(
         <Box as={as} align={align} spacing={spacing}>
