@@ -9,16 +9,29 @@ const CVTimeline: React.FC = () => {
         company: string;
         timePeriod: string;
         location: string;
-        skills: string[];
+        skills?: string[];
         description?: string;
         degree?: string;
     }
     
   const cvEntries: CVEntry[] = [
     {
+        title: "Junior Research Assistant Information Security",
+        company: "Zurich University of Applied Sciences",
+        timePeriod: "Mar 2025 - Present",
+        location: "Winterthur, Switzerland",
+    },
+    {
+        title: "Information and Cyber Security Student",
+        company: "Zurich University of Applied Sciences",
+        timePeriod: "Feb 2025 - Present",
+        location: "Zurich, Switzerland",
+        degree: "Master of Science ZHAW"
+    },
+    {
         title: "Full-Stack Software Developer",
         company: "HCLTech Confinale Wealth Solutions (formerly Confinale AG)",
-        timePeriod: "Sep 2023 - Present",
+        timePeriod: "Sep 2023 - Feb 2025",
         location: "Zurich, Switzerland",
         skills: ["Java", "Kotlin", "TypeScript", "Angular", "Dropwizard", "Ktor", "Hibernate", "SQL Server",],
     },
@@ -32,7 +45,7 @@ const CVTimeline: React.FC = () => {
     },
     {
         title: "Computer Science Student",
-        company: "ZHAW School of Engineering",
+        company: "Zurich University of Applied Sciences",
         timePeriod: "Sep 2020 - Jul 2023",
         location: "Zurich (Winterthur), Switzerland",
         skills: ["Software Engineering", "Scrum", "Java", "C#", "Python", "JavaScript", "C", "Haskell", "SQL", "HTML/CSS", "ARM Cortex-M0 Assembly", ".NET", "Linux", "Robot Operating System (ROS)", "Git", "Ghidra", "Wireshark"],

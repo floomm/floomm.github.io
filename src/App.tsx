@@ -4,7 +4,6 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import RootLayout from './layouts/RootLayout'
 import Welcome from './pages/Welcome'
 import NotFound from './pages/NotFound'
-import Whoami from "./pages/Whoami.tsx";
 
 // router and routes
 const router = createBrowserRouter(
@@ -12,7 +11,6 @@ const router = createBrowserRouter(
     <Route path='/' element={<RootLayout />}>
       <Route index element={<Welcome />} />
       <Route path='*' element={<NotFound />} />
-      <Route path='/whoami' element={<Whoami />} />
     </Route>
   )
 )

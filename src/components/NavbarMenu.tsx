@@ -1,5 +1,4 @@
-import { Box, ComponentWithAs, Heading, StackProps } from "@chakra-ui/react"
-import NavbarMenuItem from "./NavbarMenuItem"
+import { Box, ComponentWithAs, StackProps } from "@chakra-ui/react"
 
 interface NavbarMenuProps {
     as: ComponentWithAs<"div", StackProps>;
@@ -13,10 +12,10 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ as, align = "normal", spacing =
 
     return(
         <Box as={as} align={align} spacing={spacing}>
-            <NavbarMenuItem
+            {/* <NavbarMenuItem
                 to="/whoami"
                 tooltip="Learn more about me"
-                disabled={false}
+                disabled={true}
                 onClick={onClick}
             >
                 <Heading size='md'>Whoami</Heading>
@@ -37,7 +36,7 @@ const NavbarMenu: React.FC<NavbarMenuProps> = ({ as, align = "normal", spacing =
                 onClick={onClick}
             >
                 <Heading size='md'>Projects</Heading>
-            </NavbarMenuItem>
+            </NavbarMenuItem> */}
         </Box>
     );
 }
